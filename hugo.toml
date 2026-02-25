@@ -1,7 +1,7 @@
 baseURL = 'https://dievyak.github.io/'
 theme = "PaperMod"
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'My Tech Blog'
 
 [params.author]
 name = "Divya Kaliyamoorthy"
