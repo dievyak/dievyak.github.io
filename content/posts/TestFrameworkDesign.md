@@ -1,7 +1,7 @@
 +++
 date = '2026-02-25T17:19:02+01:00'
 draft = false
-title = 'My New Story'
+title = 'Test Framework Design'
 +++
 
 The Setup That Finally Solved It All:
