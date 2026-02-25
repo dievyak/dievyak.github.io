@@ -1,6 +1,7 @@
 +++
 date = '2026-02-25T17:19:02+01:00'
 draft = false
+weight = 1
 title = 'Test Framework Design'
 +++
 
