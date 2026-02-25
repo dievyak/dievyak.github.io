@@ -1,6 +1,6 @@
 +++
 date = '2026-02-25T19:28:17+01:00'
-draft = true
+draft = false
 title = 'Monolith vs Granular Frontend'
 +++
 
