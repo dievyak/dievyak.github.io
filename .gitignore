@@ -1,0 +1,18 @@
+WiredTiger*
+*.lock
+mongod.lock
+*.wt
+*.bson
+public/
+resources/_gen/
+# Ignore MongoDB files
+diagnostic.data/
+mongod.log
+WiredTiger*
+*.lock
+*.wt
+*.bson
+
+# Ignore Hugo build folders
+public/
+resources/_gen/

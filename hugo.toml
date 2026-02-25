@@ -1,0 +1,6 @@
+baseURL = 'https://dievyak.github.io/'
+theme = "PaperMod"
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+name = "Divya Kaliyamoorthy"
+email = "divya.vk.2009@gmail.com"
