@@ -125,7 +125,7 @@ Selector design is one of the most common causes of flaky UI tests. Avoid volati
 Example:
 
 xml
-<!-- <button data-testid="checkout-button">Checkout</button> -->
+<button data-testid="checkout-button">Checkout</button>
 This approach detaches tests from presentation logic, improving test maintainability and reducing false negatives after UI changes.
 
 7. Building Modular, Independent, and Fast Tests:
