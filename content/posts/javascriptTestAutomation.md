@@ -126,6 +126,8 @@ Example:
 
 ```xml {linenos=true, linenostart=128}
 <button data-testid="checkout-button">Checkout</button>
+```xml
+
 This approach detaches tests from presentation logic, improving test maintainability and reducing false negatives after UI changes.
 
 7. Building Modular, Independent, and Fast Tests:
