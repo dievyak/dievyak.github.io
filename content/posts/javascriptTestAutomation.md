@@ -1,7 +1,7 @@
 +++
 date = '2026-02-27T21:23:08+01:00'
 draft = false
-title = 'JavascriptTestAutomation'
+title = 'Javascript Test Automation'
 +++
 Great! Here’s the Markdown-ready blog version — optimized for platforms like Medium, Dev.to, or your professional portfolio site. It’s clean, structured, and readable, with formatting that highlights technical depth while maintaining professional tone and clarity.
 
