@@ -6,3 +6,9 @@ title = 'My Tech Blog'
 [params.author]
 name = "Divya Kaliyamoorthy"
 email = "divya.vk.2009@gmail.com"
+
+```toml
+[markup]
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
