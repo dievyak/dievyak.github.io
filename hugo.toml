@@ -6,8 +6,3 @@ title = 'My Tech Blog'
 [params.author]
 name = "Divya Kaliyamoorthy"
 email = "divya.vk.2009@gmail.com"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
