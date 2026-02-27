@@ -124,7 +124,7 @@ Selector design is one of the most common causes of flaky UI tests. Avoid volati
 
 Example:
 
-```xml {linenos=true, linenostart=128}
+```xml{linenos=true, linenostart=128}
 <button data-testid="checkout-button">Checkout</button>
 ```
 
