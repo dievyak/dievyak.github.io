@@ -7,8 +7,10 @@ title = 'My Tech Blog'
 name = "Divya Kaliyamoorthy"
 email = "divya.vk.2009@gmail.com"
 
-```toml
 [markup]
   [markup.highlight]
     codeFences = true
     lineNos = true
+
+[params.assets]
+  disableHLJS = true
