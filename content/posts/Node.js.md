@@ -23,12 +23,16 @@ Rejected: the operation failed and an error is available.
 Instead of nesting callbacks, you attach handlers using .then() for success and .catch() for errors. This leads to more readable and maintainable code:
 
 myPromise
+
+```javascript
   .then((result) => {
     console.log("Promise fulfilled with:", result);
   })
   .catch((error) => {
     console.error("Promise rejected with:", error);
   });
+```
+
 
 Why Promises Are Powerful
 Simplified error handling
@@ -37,14 +41,18 @@ Errors thrown anywhere in a promise chain can be caught in a single .catch(), in
 Chaining
 Promises allow you to express a sequence of async steps in a linear way:
 
+```javascript
 fetchData()
   .then(processData)
   .then(displayResults)
   .catch(handleError);
+```
+
 
 Running tasks in parallel with Promise.all
 You can run multiple async operations at the same time and wait for all of them to finish:
 
+```javascript
 const tasks = [fetchData1(), fetchData2(), fetchData3()];
 
 Promise.all(tasks)
@@ -52,6 +60,8 @@ Promise.all(tasks)
     // results is an array of all resolved values
   })
   .catch(handleError);
+```
+  
 
 Drawbacks of Promises
 Error flows can still become tricky in very long or branching promise chains.
@@ -70,12 +80,18 @@ Return them from functions
 Examples:
 
 // a) Assigning a function to a variable
+
+```javascript
 const greet = function () {
   return "Hello World";
 };
 console.log(greet());
 
+```
+
 // b) Passing a function as an argument
+
+```javascript
 function callFunction(fn) {
   console.log(fn());
 }
@@ -83,8 +99,12 @@ function sayHi() {
   return "Hi";
 }
 callFunction(sayHi);
+```
+
 
 // c) Returning a function from another function
+
+```javascript
 function multiplier(factor) {
   return function (num) {
     return num * factor;
@@ -92,6 +112,7 @@ function multiplier(factor) {
 }
 const double = multiplier(2);
 console.log(double(5)); // 10
+```
 
 This property is the basis of higher‑order functions like map, filter, and reduce.
 
@@ -137,6 +158,7 @@ A callback is simply a function you pass to another function to be executed late
 
 Callback Hell happens when you nest many callbacks inside each other, for example:
 
+```javascript
 doSomething(() => {
   doSomethingElse(() => {
     doThirdThing(() => {
@@ -144,6 +166,7 @@ doSomething(() => {
     });
   });
 });
+```
 
 This pyramid‑shaped code is hard to read, debug, and maintain. Promises and async/await are the modern ways to avoid callback hell and write async code that looks more like synchronous code.
 
@@ -271,6 +294,7 @@ Streams are ideal for handling large files or data pipelines efficiently.
 Example: Sum Using a Promise
 Here’s a simple example that wraps a calculation in a promise:
 
+```javascript
 function sum(a, b) {
   return new Promise((resolve, reject) => {
     if (typeof a !== "number" || typeof b !== "number") {
@@ -288,12 +312,14 @@ sum(5, 10)
   .catch((error) => {
     console.error("Error:", error);
   });
+```
 
 What Is Multer?
 Multer is an Express middleware for handling multipart/form-data, which is the format used for file uploads in forms.
 
 Example setup:
 
+```javascript
 const express = require("express");
 const multer = require("multer");
 const app = express();
@@ -308,8 +334,11 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+```
 
 // Handle single file upload
+
+```javascript
 app.post("/upload", upload.single("myFile"), (req, res) => {
   res.send("File uploaded successfully!");
 });
@@ -317,6 +346,7 @@ app.post("/upload", upload.single("myFile"), (req, res) => {
 app.listen(3000, () => {
   console.log("Server started on port 3000");
 });
+```
 
 Streams vs Buffers (Conceptual Difference)
 Buffer: holds a chunk of data in memory; good for relatively small, complete pieces of binary data.
