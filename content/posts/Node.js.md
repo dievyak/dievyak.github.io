@@ -4,7 +4,8 @@ draft = false
 title = 'Node.js'
 +++
 
-Synchronous vs Asynchronous in Node.js
+Synchronous vs Asynchronous in Node.js:
+
 When we talk about synchronous code in Node.js, we mean code that runs step by step, in order. Each line must finish before the next one can start. If a function takes a long time (for example, reading a large file), the rest of the program has to wait until that function completes. That’s why synchronous code is often called blocking.
 
 Asynchronous code, on the other hand, does not wait for a long‑running operation to finish. Instead, Node.js starts the operation (like reading a file, making a network request, or querying a database) and then immediately moves on to the next task. When the operation is done, Node.js “comes back” with the result via a callback, promise, or async/await. This is why asynchronous code is called non‑blocking.
@@ -12,6 +13,7 @@ Asynchronous code, on the other hand, does not wait for a long‑running operati
 Because Node.js is single‑threaded, non‑blocking I/O is a huge advantage: the event loop can continue serving other requests while waiting for I/O, which makes Node.js very good at handling many concurrent connections.
 
 What Are Promises?
+
 Promises provide a cleaner way to work with asynchronous code. A Promise represents a value that will be available in the future (or an error that might happen). It can be in one of three states:
 
 Pending: the async operation is still running.
@@ -34,7 +36,8 @@ myPromise
 ```
 
 
-Why Promises Are Powerful
+Why Promises Are Powerful:
+
 Simplified error handling
 Errors thrown anywhere in a promise chain can be caught in a single .catch(), instead of passing error objects manually through nested callbacks.
 
@@ -49,7 +52,8 @@ fetchData()
 ```
 
 
-Running tasks in parallel with Promise.all
+Running tasks in parallel with Promise.all:
+
 You can run multiple async operations at the same time and wait for all of them to finish:
 
 ```javascript
@@ -63,12 +67,14 @@ Promise.all(tasks)
 ```
   
 
-Drawbacks of Promises
+Drawbacks of Promises:
+
 Error flows can still become tricky in very long or branching promise chains.
 
 Promises don’t support cancellation out of the box. Once started, they usually run to completion, which can waste resources in some cases.
 
-First‑Class Functions in JavaScript
+First‑Class Functions in JavaScript:
+
 In JavaScript, functions are first‑class citizens. That means you can treat them like any other value:
 
 Assign them to variables
@@ -116,7 +122,8 @@ console.log(double(5)); // 10
 
 This property is the basis of higher‑order functions like map, filter, and reduce.
 
-Why Node.js Is Often Preferred
+Why Node.js Is Often Preferred:
+
 Node.js has become a popular choice for building APIs and backend services for several reasons:
 
 Non‑blocking I/O model: Node’s event‑driven, non‑blocking architecture allows it to handle many concurrent requests with good performance and low overhead, without manually managing threads.
@@ -180,6 +187,7 @@ Centralized error handling with .catch() rather than checking and propagating er
 Built‑in helpers (Promise.all, Promise.race, etc.) for advanced workflows like parallel execution and “first result wins”.
 
 What Is a Stub?
+
 A stub is a fake implementation of a function used in tests. Instead of calling real services (like a database, email service, or external API), you:
 
 Control exactly what data it returns.
@@ -190,7 +198,8 @@ Inspect how your code calls it (arguments, call count, etc.).
 
 For example, if you have a function that reads from a database, in tests you can stub the DB function to return a fixed object. This keeps tests fast, deterministic, and independent of external systems.
 
-Node.js Process Exit Codes (Short Overview)
+Node.js Process Exit Codes (Short Overview):
+
 When a Node.js process exits, it returns an exit code to the operating system. Some common ones:
 
 Code 1 – Uncaught fatal exception: an error wasn’t handled anywhere and crashed the app.
@@ -206,7 +215,8 @@ Code 7 – Internal exception handler failure: even Node’s internal error hand
 Knowing these helps diagnose why your app exited unexpectedly.
 
 
-Why Node Uses the V8 Engine
+Why Node Uses the V8 Engine:
+
 There are several JavaScript engines: SpiderMonkey (Firefox), Chakra (older Edge), etc. Node.js chose Google’s V8 because:
 
 It’s open‑source and very actively maintained.
@@ -238,6 +248,7 @@ Handlers: functions or objects that perform the actual work when an event occurs
 Node’s event loop, combined with its callbacks and event emitters, is a practical implementation of the Reactor pattern.
 
 What Is Middleware?
+
 In Express.js, middleware is a function that runs between the incoming request and the final response. It can:
 
 Inspect or modify the request (req) or response (res).
@@ -248,7 +259,8 @@ Decide whether to pass control to the next middleware or end the response.
 
 You can think of middleware like checkpoints in an airport: security, immigration, boarding, etc. Each step can approve you, modify something (e.g., check luggage), or stop you.
 
-Types of Middleware
+Types of Middleware:
+
 Application‑level middleware: attached directly to the Express app instance (app.use(...)). Runs for all or specific routes.
 
 Router‑level middleware: attached to an express.Router() instance, useful for grouping related routes (like /users, /admin).
@@ -260,6 +272,7 @@ Error‑handling middleware: functions with four parameters (err, req, res, next
 Third‑party middleware: installed from npm, like morgan, cors, cookie-parser, etc.
 
 Buffers in Node.js
+
 A Buffer is a Node.js data structure used to handle raw binary data. It’s especially useful for operations like:
 
 Reading and writing files.
@@ -315,6 +328,7 @@ sum(5, 10)
 ```
 
 What Is Multer?
+
 Multer is an Express middleware for handling multipart/form-data, which is the format used for file uploads in forms.
 
 Example setup:
@@ -348,7 +362,8 @@ app.listen(3000, () => {
 });
 ```
 
-Streams vs Buffers (Conceptual Difference)
+Streams vs Buffers (Conceptual Difference):
+
 Buffer: holds a chunk of data in memory; good for relatively small, complete pieces of binary data.
 
 Stream: processes data in smaller chunks over time; better for large or continuous data, reducing memory usage.
@@ -369,9 +384,11 @@ spawn(): starts a process and returns streams for stdin/stdout/stderr (good for 
 fork(): a special case of spawn() optimized for running another Node.js module.
 
 Deadlocks in Node.js
+
 A deadlock is a situation where two or more operations are waiting on each other and none can proceed. In Node.js, this can happen if multiple resources or locks are involved and the code is structured in such a way that each part is waiting for the other. The result is a hung or frozen system.
 
 OAuth in Simple Terms
+
 OAuth (Open Authorization) is a framework that lets one application access data from another service on a user’s behalf, without needing the user’s password.
 
 Typical flow:
@@ -385,6 +402,7 @@ Google sends the app an access token.
 The app uses the token to access the user’s data securely.
 
 Event Loop Starvation
+
 Event loop starvation happens when long‑running or CPU‑intensive tasks block the event loop so much that it can’t process new events quickly. Symptoms include:
 
 Slow or delayed responses.
@@ -419,6 +437,7 @@ Backend API at http://localhost:5000
 Without CORS configured on the backend, the browser will block the frontend’s requests and show a CORS error. Enabling CORS on the server tells the browser it’s safe to allow those cross‑origin calls.
 
 Redis in a Nutshell
+
 Redis (Remote Dictionary Server) is an in‑memory key–value data store, known for being extremely fast. Common uses:
 
 Caching frequently accessed data.
@@ -432,9 +451,11 @@ Real‑time analytics and leaderboards.
 In Node.js, you use a Redis client (like redis or ioredis) to connect to a Redis server and run commands like SET, GET, DEL, PUBLISH, etc.
 
 DNS Module in Node.js
+
 The Node.js dns module gives you programmatic access to DNS lookups. It lets you translate domain names (like example.com) into IP addresses and vice versa, among other DNS operations. This is useful when building network tools or when you need fine‑grained control over how hostnames are resolved.
 
 Improving Database Query Performance
+
 Some practical tips to speed up database queries:
 
 Use indexes on columns that you search, filter, or join on frequently.
@@ -450,6 +471,7 @@ Partition very large tables (by date, region, etc.) when appropriate.
 Avoid unnecessary ORDER BY or complex sorts unless they’re really needed.
 
 Indexing and Its Limitations
+
 An index is like a lookup table that lets the database find rows much faster than scanning the entire table.
 
 Trade‑offs:
