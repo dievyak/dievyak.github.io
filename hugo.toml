@@ -19,4 +19,6 @@ email = "divya.vk.2009@gmail.com"
   SiteVerificationTag = "LyG89bKfNQ39cvHoCOm3mL9Q9kjvTgTUlOktx2kOg1Y"
   
   [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com"
 
