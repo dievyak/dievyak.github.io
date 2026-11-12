@@ -14,3 +14,6 @@ email = "divya.vk.2009@gmail.com"
 
 [params.assets]
   disableHLJS = true
+
+  [params]
+  googleSiteVerification = "LyG89bKfNQ39cvHoC0n3mL9Q9kjvTgTU10ktx2k0g1Y"
