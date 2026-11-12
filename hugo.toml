@@ -17,4 +17,6 @@ email = "divya.vk.2009@gmail.com"
 
   [params.analytics.google]
   SiteVerificationTag = "LyG89bKfNQ39cvHoCOm3mL9Q9kjvTgTUlOktx2kOg1Y"
+  
+  [[params.socialIcons]]
 
